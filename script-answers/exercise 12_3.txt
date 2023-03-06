@@ -1,0 +1,8 @@
+docker start -i e0f
+# apt-get update
+# apt-get -y install 
+# nano /usr/src/app/index.js
+
+console.log('Hello World')
+^O
+^X
