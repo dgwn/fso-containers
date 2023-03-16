@@ -1,0 +1,8 @@
+# docker ps                             
+# docker exec -it 3ce bash
+# redis-cli
+# KEYS *
+# GET todoCount
+# SET todoCount 9001
+# GET todoCount
+# DEL todoCount
