@@ -62,3 +62,4 @@ typings/
 
 # mongo dev db volume
 mongo_data
+redis_data
