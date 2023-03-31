@@ -49,7 +49,7 @@ singleRouter.get("/", async (req, res) => {
 singleRouter.put("/", async (req, res) => {
   const todo = req.todo;
   const updatedTodo = await Todo.findOneAndUpdate(
-    { id: req.params.id },
+    { _id: req.todo.id },
     { done: req.body.done }
   );
 
