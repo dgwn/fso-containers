@@ -1,0 +1,20 @@
+services:
+  frontend:
+    image: frontend-dev
+    build:
+      context: .
+      dockerfile: todo-frontend/dev.dockerfile
+    volumes:
+      - ./:/usr/src/frontend
+    ports:
+      - 3001:3000
+    container_name: frontend-dev-proxy
+  nginx:
+    image: nginx:1.20.1
+    volumes:
+      - ./nginx.conf:/etc/nginx/ngninx.conf:ro
+    ports:
+      - 8080:80
+    container_name: reverse-proxy
+    depends_on:
+      - frontend # waits for the front end container to start
